@@ -4,6 +4,7 @@ Requirements
 - Ansible Installation
 - User Authentication with Kerberos
 - inventory file
+- Define Variables
 
 Install Ansible On Ubuntu
 -------------------------
@@ -59,8 +60,24 @@ ansible_user: Username
 ansible_password: Password
 ```
 
+Defining Variables
+------------------
+You should define your variables(Octopus Tentacle Instace Name, Port, OctopusThumprint, OctopusApiKey, Octopus Role, OctopusEnvironmentName )
 
-```Create Inventory File
+https://github.com/vcan92/Automating-Octopus-Tentacle-Installation/blob/master/server_register_to_octopus_deploy_server/vars/main.yml
+
+```DefineVariable
+
+---
+InstanceName: ExampleInstanceName
+Port: YourPort(Default 10933)
+Thumprint: YourOctopusThumprint
+ApiKey: YourOctopusApiKey
+Role: YourServerRole
+EnvironmentName: YourEnvironmentName
+```
+
+```Run Ansible-Palybook
 
 Ansible-Playbook -i inventory.yml configuration_octopus_windows_servers.yml
 
