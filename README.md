@@ -1,3 +1,8 @@
+The Goal of the Project
+-----------------------
+Add multiple windows servers to the octopus with ansible
+
+
 Requirements
 ------------
 
