@@ -1,0 +1,11 @@
+--- 
+
+- name: "Install Octopus Deploy Tentacle"
+  win_chocolatey: 
+    name: octopusdeploy.tentacle
+    state: present
+
+- name: "Upgrade Octopus Deploy Tentacle"
+  win_chocolatey: 
+    name: octopusdeploy.tentacle
+    state: latest

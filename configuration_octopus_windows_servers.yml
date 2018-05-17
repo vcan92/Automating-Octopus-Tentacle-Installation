@@ -1,0 +1,9 @@
+---
+
+ - name: Install Choco-OctopusTentacle &  Upgrade Octopus Tentacle
+   hosts: "{{hosts}}"
+   gather_facts: false
+   roles:
+     - install_chocolatey
+     - install_octopus_tentacle_with_choco
+     - server_register_to_octopus_deploy_server 

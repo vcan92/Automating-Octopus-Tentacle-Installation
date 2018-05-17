@@ -1,0 +1,35 @@
+- name: Create Tentacle Instance
+  win_command: Tentacle.exe create-instance --instance "{{InstanceName}}" --config "C:\Octopus\Tentacle.config" --console
+  args:
+    chdir:  C:\Program Files\Octopus Deploy\Tentacle\
+
+- name: Create Tentacle Certificate
+  win_command: Tentacle.exe new-certificate --instance "{{InstanceName}}" --if-blank --console
+  args:
+    chdir:  C:\Program Files\Octopus Deploy\Tentacle\
+
+- name: Tentacle Configure
+  win_command: Tentacle.exe configure --instance "{{InstanceName}}" --reset-trust --console
+  args:
+    chdir:  C:\Program Files\Octopus Deploy\Tentacle\
+
+- name: Tentacle Configure For Port
+  win_command: Tentacle.exe configure --instance "{{InstanceName}}" --home "C:\Octopus" --app "C:\Octopus\Applications" --port "{{Port}}}" --console
+  args:
+    chdir:  C:\Program Files\Octopus Deploy\Tentacle\
+
+- name: Tentacle Configure for Thumprint
+  win_command: Tentacle.exe configure --instance "{{InstanceName}}" --trust "{{Thumprint}}" --console 
+  args:
+    chdir:  C:\Program Files\Octopus Deploy\Tentacle\
+
+- name: Tentactale Register Octopus Server
+  win_command: Tentacle.exe register-with --instance "{{InstanceName}}" --server "http://octopus.trendyol.com" --apiKey="{{ApiKey}}" --role "{{Role}}"  --environment "{{EnvironmentName}}" --comms-style TentaclePassive --console
+  args:
+    chdir:  C:\Program Files\Octopus Deploy\Tentacle\
+
+- name: Tentacle Service Start
+  win_command: Tentacle.exe service --instance "{{InstanceName}}" --install --start --console
+  args:
+    chdir:  C:\Program Files\Octopus Deploy\Tentacle\
+    
