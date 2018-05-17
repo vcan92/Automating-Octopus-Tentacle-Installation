@@ -57,6 +57,7 @@ ansible_winrm_scheme: http
 ansible_winrm_cert_validation: ignore
 ansible_user: Username
 ansible_password: Password
+```
 
 
 
