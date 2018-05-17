@@ -26,7 +26,7 @@ Install Kerberos Authentitacion on Ubuntu
 -----------------------------------------
 
 ```Install Kerberos
-*pip install pywinrm[kerberos]
+ pip install pywinrm[kerberos]
 ```
 
 Configuring Host Kerberos
@@ -80,6 +80,7 @@ Thumprint: YourOctopusThumprint
 ApiKey: YourOctopusApiKey
 Role: YourServerRole
 EnvironmentName: YourEnvironmentName
+SlackToken: YourSlackToken
 ```
 
 ```Run Ansible-Palybook
