@@ -60,6 +60,12 @@ ansible_password: Password
 ```
 
 
+```Create Inventory File
+
+Ansible-Playbook -i inventory.yml configuration_octopus_windows_servers.yml
+
+```
+
 
 
 
