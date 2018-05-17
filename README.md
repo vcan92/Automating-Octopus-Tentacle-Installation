@@ -10,7 +10,7 @@ Install Ansible On Ubuntu
 -------------------------
 
 ```Install Ansible
-  sudo apt-get update
+ sudo apt-get update
  sudo apt-get install software-properties-common
  sudo apt-add-repository ppa:ansible/ansible
  sudo apt-get update
@@ -28,18 +28,18 @@ Configuring Host Kerberos
 -------------------------
 
 ```Configuring Kerberos
--vi /etc/krb5.conf
+ vi /etc/krb5.conf
 
--[realms]
+ [realms]
     MY.DOMAIN.COM = {
         kdc = domain-controller1.my.domain.com
         kdc = domain-controller2.my.domain.com
     }
     
--[domain_realm]
+ [domain_realm]
     .my.domain.com = MY.DOMAIN.COM
     
--kinit username@MY.DOMAIN.COM
+kinit username@MY.DOMAIN.COM
 ```
 
 
