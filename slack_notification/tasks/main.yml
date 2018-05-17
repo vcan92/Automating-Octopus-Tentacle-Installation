@@ -1,0 +1,8 @@
+
+ - name: Send Slack Notification
+   slack:
+     token: "{{SlacToken}}"
+     msg: "Process Completed 
+     channel: ansible-tower
+     username: 'Ansible'   
+   delegate_to: localhost
