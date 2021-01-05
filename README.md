@@ -89,7 +89,7 @@ Ansible-Playbook -i inventory.yml configuration_octopus_windows_servers.yml
 
 ```
 
-* You should add your user "Enable Computer and User Accounts to be Trusted for Delegation"
+
 
 
 
